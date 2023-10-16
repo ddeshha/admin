@@ -1,3 +1,4 @@
+<?php $active = "Dashboard" ?>
 <!DOCTYPE html>
 <html>
     <?php require_once("inc/header.php"); ?>

@@ -18,10 +18,10 @@
         </div>
     </form>
     <ul class="nav menu">
-        <li class="<?php // if($_SERVER['REQUEST_URI'] == $_SERVER['PHP_SELF'] ) echo 'active'; ?>"><a href="dashboard.php"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
+        <li class="<?php  if( $active == "Dashboard" ) echo 'active'; ?>"><a href="dashboard.php"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
         </a>
         </li>
-        <li class="<?php // if($_SERVER['REQUEST_URI'] ) echo 'active'; ?>"><a href="proudcts.php"><em class="fa fa-dashboard">&nbsp;</em>Proudcts</a></li>
+        <li class="<?php if( $active == "Proudcts" ) echo 'active'; ?>"><a href="proudcts.php"><em class="fa fa-dashboard">&nbsp;</em>Proudcts</a></li>
         </a>
         </li>
         <li><a href="logout.php"><em class="fa fa-power-off">&nbsp;</em>Logout</a></li>
