@@ -18,13 +18,13 @@
     $select = "SELECT * FROM products";
 
     $reslut = $connect->query($select);
-
+    $i = 1;
     while ($show = $reslut->fetch_assoc()):
       ?>
 
       <tr>
         <td scope="row">
-          <?= $show['id'] ?>
+          <?= $i++ ?>
         </td>
         <td>
           <?= $show['name'] ?>
@@ -56,9 +56,7 @@
 
           echo $show['name']; ?>
         </td>
-
         <td>
-
           <?php $show['category'];
           $select_category = "SELECT * FROM category";
 
@@ -69,11 +67,12 @@
           echo $show['name']; ?>
         </td>
         <td>
-          <a href="?action=edit&id=<?= $show['id']?>"type="submit" class="btn btn-info form-control my">Edit</a>
-          <a  href="?action=delete" type="submit" class="btn btn-danger form-control">Delete</a>
+          <a class="btn btn-info" href="?action=edit&id=<?= $show['id']?>">Edit</a>
+          <a class="btn btn-danger" href="fun/do_delete_pro.php?id=<?= $show['id'] ?>">Delete</a>
         </td>
-        
+
       </tr>
     <?php endwhile; ?>
+
   </tbody>
 </table>
