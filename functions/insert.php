@@ -20,7 +20,6 @@ $des = $_POST["description"];
     $image_extension = end($image_exploud);
 
     $extension_allowed = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'tif'];
-
     
     $image_size = $_FILES['image']['size'];
 
